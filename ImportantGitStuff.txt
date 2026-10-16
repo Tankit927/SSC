@@ -1,0 +1,21 @@
+If local repo fucked up then
+- Check for consistency using
+    1. git status
+    2. git lfs status
+    3. git lfs fsck
+- Get remote contents
+    1. git fetch --all
+    2. git lfs fetch --all
+- Restore deleted stuff
+    1. git restore .
+- Unfuck local repo
+    1. git add .
+    2. git commit
+    3. git rebase
+- Check consistency again
+- Unfuck lfs if required
+    1. git lfs update
+    2. git add --renormalize .
+- Unfuck local repo again
+- Push if required
+    1. git push
